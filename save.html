@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="normal.css">
+
+</head>
+
+<title>換算記録</title>
+
+<body>
+
+  <h1>換算記録</h1>
+
+
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">換算する</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="rate.html">換算率を見る</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="save.html">過去の記録を見る</a>
+    </li>
+  </ul>
+</nav>
+<p class="m-4">換算した記録し比較できます。最新10件の記録まで保存されます。</p>
+
+<p id="savedData" class="mt-3"></p>
+<button type="button" class="btn btn-primary" onClick="resetSaves()">記録をリセットする</button>
+    <script type="text/javascript" src="save.js"></script>
+</body>
+
+
+</html>
