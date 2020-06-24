@@ -3,3 +3,12 @@ body {
   margin-right: 2%;
   margin-top: 1%;
 }
+
+.error {
+  border:2px solid red;
+}
+
+input {
+  text-align: right;
+  width: 100px
+}

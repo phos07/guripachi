@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="normal.css">
+
+</head>
+
+<title>一遊戯収支</title>
+
+<body>
+
+  <h1>一遊戯収支計算機</h1>
+
+
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item ">
+      <a class="nav-link" href="index.html">換算する</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="rate.html">換算率を見る</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="save.html">過去の記録を見る</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="income.html">一遊戯目標収支計算機</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="income2.html">一遊戯収支計算機</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="m-4">
+  <p>一遊戯収支計算機は現在の持ちメダルなどから清算した時の収支を計算します。</p>
+</div>
+
+<form name="input">
+<div class="m-3">
+  <div class="row">
+    <div class="col-sm-2">
+      投資:
+    </div>
+    <div class="col-sm-4">
+      <input type="number" name="invest" value=0>
+      000パチドル
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      現在の持ちメダル:
+    </div>
+    <div class="col-sm-4">
+      <input type="number" name="medalnow" value=0>
+      枚<br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      ホールレート:
+    </div>
+    <div class="col-sm-4">
+      <input type="radio" id="20" name="hallrate" value=20 checked="checked">
+      <label for="20">20パチドル</label><br>
+      <input type="radio" id="16" name="hallrate" value=16.6>
+      <label for="16">16.6パチドル</label><br>
+      <input type="radio" id="14" name="hallrate" value=14.3>
+      <label for="14">14.3パチドル</label><br>
+      <input type="radio" id="12" name="hallrate" value=12.5>
+      <label for="12">12.5パチドル</label><br>
+      <input type="radio" id="otherhallrate" name="hallrate" value="">
+      <label for="otherhallrate">
+      <input type="number" id="numberhallrate" name="hallrate" value=""> パチドル<br>
+      </label>
+      <br>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-2">
+      レートアップ券・イベントレート:
+    </div>
+    <div class="col-sm-4">
+      <input type="radio" id="norate" name="ticketrate" value=1 checked="checked">
+      <label for="norate">なし</label><br>
+      <input type="radio" id="rate125" name="ticketrate" value=1.25>
+      <label for="rate125">レート1.25倍</label><br>
+      <input type="radio" id="rate15" name="ticketrate" value=1.5>
+      <label for="rate15">レート1.5倍</label><br>
+      <input type="radio" id="rate2" name="ticketrate" value=2>
+      <label for="rate2">レート2倍</label><br>
+      <input type="radio" id="rate5" name="ticketrate" value=5>
+      <label for="rate5">レート5倍</label><br>
+      <input type="radio" id="rate8" name="ticketrate" value=8>
+      <label for="rate8">レート8倍</label><br>
+      <input type="radio" id="otherticketrate" name="ticketrate" value="">
+      <label for="otherticketrate">
+      <input type="number" id="numberticketrate" name="ticketrate" value=""> 倍
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-sm-1 col-sm-2">
+      <br><br><br>
+      <button type="button" class="btn btn-primary" onClick="calculate()">計算する</button>
+    </div>
+    <div class="col-sm-4">
+      <br><br><br>
+      <h3 id="result"></h3>
+    </div>
+  </div>
+</div>
+</form>
+
+    <script type="text/javascript">
+
+    function calculate() {
+      if (document.getElementById("otherhallrate").checked) {
+        if (!document.getElementById("numberhallrate").value) {
+          document.getElementById("numberhallrate").className = document.getElementById("numberhallrate").className += " error";
+        } else {
+          document.getElementById("numberhallrate").className = document.getElementById("numberhallrate").className.replace( /(?:^|\s)error(?!\S)/g , '' );
+        }
+      } else {
+          document.getElementById("numberhallrate").className = document.getElementById("numberhallrate").className.replace( /(?:^|\s)error(?!\S)/g , '' );
+      }
+
+      if (document.getElementById("otherticketrate").checked) {
+        if (!document.getElementById("numberticketrate").value) {
+          document.getElementById("numberticketrate").className = document.getElementById("numberticketrate").className + " error";
+          return;
+        } else {
+          document.getElementById("numberticketrate").className = document.getElementById("numberticketrate").className.replace( /(?:^|\s)error(?!\S)/g , '' );
+        }
+      } else {
+          document.getElementById("numberticketrate").className = document.getElementById("numberticketrate").className.replace( /(?:^|\s)error(?!\S)/g , '' );
+      }
+
+      if (document.getElementById("otherhallrate").checked) {
+        if (!document.getElementById("numberhallrate").value) {
+          return;
+        }
+      };
+
+      var invest = parseFloat(document.input.invest.value) * 1000;
+      var medalnow = parseFloat(document.input.medalnow.value);
+      document.getElementById("otherhallrate").value = document.getElementById("numberhallrate").value;
+      var hallrate = parseFloat(document.input.hallrate.value);
+      document.getElementById("otherticketrate").value = document.getElementById("numberticketrate").value;
+      var ticketrate = parseFloat(document.input.ticketrate.value);
+      var minus = invest * ticketrate;
+      var subtotal = medalnow * hallrate * ticketrate;
+      var total = subtotal - minus;
+      console.log(total);
+      document.getElementById("result").innerHTML = "精算時" + total + "パチドル";
+    }
+    </script>
+</body>
+
+
+</html>
