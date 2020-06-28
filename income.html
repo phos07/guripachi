@@ -172,14 +172,11 @@
       document.getElementById("otherticketrate").value = document.getElementById("numberticketrate").value;
       var ticketrate = parseFloat(document.input.ticketrate.value);
       var minus = objective + (invest * ticketrate);
-      console.log(minus);
       var rate = hallrate * ticketrate;
       var subtotal = minus/rate;
       var ceilsubtotal = Math.ceil(subtotal);
       var total = ceilsubtotal - medalnow;
-      console.log(total);
       document.getElementById("result").innerHTML = "精算時" + ceilsubtotal + "枚<br>あと" + total + "枚";
-      console.log("hi");
     }
     </script>
 </body>

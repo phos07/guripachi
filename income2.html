@@ -163,9 +163,9 @@
       document.getElementById("otherticketrate").value = document.getElementById("numberticketrate").value;
       var ticketrate = parseFloat(document.input.ticketrate.value);
       var minus = invest * ticketrate;
-      var subtotal = medalnow * hallrate * ticketrate;
-      var total = subtotal - minus;
-      console.log(total);
+      var subtotalA = Math.floor(medalnow * hallrate);
+      var subtotalB = subtotalA * ticketrate;
+      var total = subtotalB - minus;
       document.getElementById("result").innerHTML = "精算時" + total + "パチドル";
     }
     </script>
