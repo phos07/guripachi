@@ -2,12 +2,11 @@
 new gridjs.Grid({
   columns: [{
     name: "機種名",
-    width: "30%",
   }, {
     name: "平均出玉",
     width: "10%",
   }, {
-    name: "平均出玉（エンペラーあり）",
+    name: "エンペラー時",
     width : "10%",
   }, {
     name: "純増",
