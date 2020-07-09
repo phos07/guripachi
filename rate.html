@@ -4,7 +4,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="normal.css">
@@ -20,36 +22,52 @@
 
   <h1>破壊換算率</h1>
 
-  <nav class="navbar navbar-expand-sm bg-light navbar-light">
-<ul class="navbar-nav mr-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="index.html">換算する</a>
-  </li>
-  <li class="nav-item active">
-    <a class="nav-link" href="rate.html">換算率を見る</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="save.html">過去の記録を見る</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="income.html">一遊戯目標収支計算機</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="income2.html">一遊戯収支計算機</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="chart.html">機種別出玉性能一覧表(iOS)</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="chartAndroid.html">機種別出玉性能一覧表(Android)</a>
-  </li>
-</ul>
-<ul class="navbar-nav">
-<span style="text-align: right;" class="navbar-text">
-  サイト管理者: phos (ID: 1009463113, iOS)
-</span>
-</ul>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">ホーム</a>
+        </li>
+        <li class="nav-item active dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            破壊換算
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="convert.html">換算する</a>
+            <a class="dropdown-item" href="rate.html">換算率を見る</a>
+            <a class="dropdown-item" href="save.html">過去の記録を見る</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            一遊戯計算
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="income2.html">一遊戯収支計算</a>
+            <a class="dropdown-item" href="income.html">一遊戯収支逆算</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            機種別出玉表
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="chart.html">iOS版一覧表</a>
+            <a class="dropdown-item" href="chartAndroid.html">Android版一覧表</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+      <span style="text-align: right;" class="navbar-text">
+        サイト管理者: phos (ID: 1009463113, iOS)
+      </span>
+    </ul>
+    </div>
+  </nav>
 
 <div class="m-4">
   <p>計算に使用する換算率一覧です。数値を変えて保存すると換算率を変更することができます。</p>

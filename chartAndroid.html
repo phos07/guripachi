@@ -9,14 +9,15 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="normal.css">
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
 </head>
 
-<title>換算記録</title>
+<title>出玉性能一覧表 (Android)</title>
 
 <body>
 
-  <h1>換算記録</h1>
+  <h1>機種別出玉性能一覧表（Android）</h1>
 
 
 
@@ -30,7 +31,7 @@
         <li class="nav-item">
           <a class="nav-link" href="index.html">ホーム</a>
         </li>
-        <li class="nav-item active dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             破壊換算
           </a>
@@ -49,7 +50,7 @@
             <a class="dropdown-item" href="income.html">一遊戯収支逆算</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             機種別出玉表
           </a>
@@ -67,11 +68,21 @@
     </div>
   </nav>
 
-<p class="m-4">換算した結果を記録し比較できます。最新10件の記録まで保存されます。</p>
+<div class="m-4">
+  <button type="button" onClick="location.href = 'chart.html';" class="btn btn-primary">iOS版へ</button><br><br>
+  <p> この一覧表は慣れていない機種でアタックするときにその機種の出玉性能を調べるためのものです。あくまでも目安なので、慣れたら自分でとったデータを活用する方いいでしょう。<br>
+    <br>破壊持続は破壊n分に対しその効果が持続する時間を倍率で表しています（例 破壊10分で効果持続25分 → 2.5倍）。破壊等の解説は<a href="https://seesaawiki.jp/guripachi/" target="_blank">こちらのサイト</a>がオススメです。
+  </p>
+</div>
 
-<p id="savedData" class="mt-3"></p>
-<button type="button" class="btn btn-primary" onClick="resetSaves()">記録をリセットする</button>
-    <script type="text/javascript" src="save.js"></script>
+<div id="wrapper"></div>
+
+<div class="m-3">
+<p>調整中</p>
+</div>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <script src="chartAndroid.js"></script>
 </body>
 
 
