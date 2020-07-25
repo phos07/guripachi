@@ -138,9 +138,9 @@ var rateSetting = parseFloat(document.ratemisc.ratesetting.value);
 var rateCheckSetting = parseFloat(document.ratemisc.ratechecksetting.value);
 var ratex1_5 = parseFloat(document.ratemisc.ratex1_5.value);
 var ratex2 = parseFloat(document.ratemisc.ratex2.value);
-var rateSlotchoku = parseFloat(document.ratemisc.rateslotchoku.value);
-var ratePachichoku = parseFloat(document.ratemisc.ratepachichoku.value);
-var rateSpecialchoku = parseFloat(document.ratemisc.ratespecialchoku.value);
+var rateSlotchoku = parseFloat(document.ratechoku.rateslotchoku.value);
+var ratePachichoku = parseFloat(document.ratechoku.ratepachichoku.value);
+var rateSpecialchoku = parseFloat(document.ratechoku.ratespecialchoku.value);
 
 localStorage.setItem("hakai1R", rateHakai1);
 localStorage.setItem("hakai3R", rateHakai3);
@@ -230,7 +230,7 @@ function initialize() {
   localStorage.setItem("hakai30R", 30);
   localStorage.setItem("hakai60R", 60);
   localStorage.setItem("hakai120R", 150);
-  localStorage.setItem("hakaiinfR", 1400);
+  localStorage.setItem("hakaiinfR", 1250);
   localStorage.setItem("kakuseihakai1R", 10);
   localStorage.setItem("kakuseihakai3R", 30);
   localStorage.setItem("kakuseihakai5R", 50);

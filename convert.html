@@ -56,6 +56,9 @@
             <a class="dropdown-item" href="chartAndroid.html">Android版一覧表</a>
           </div>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="attack.html">機種別アタック講座</a>
+        </li>
       </ul>
       <ul class="navbar-nav">
       <span style="text-align: right;" class="navbar-text">
@@ -71,6 +74,45 @@
   </p>
 </div>
 
+<div class="m-1 p-1 mb-3 pb-3">
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
+      <h2>直撃系</h2>
+    </div>
+  </div>
+  <form name="choku">
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        スロ直:<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="numeric"  name="slotchoku" value=0>
+        枚<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        パチ直:<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="numeric"  name="pachichoku" value=0>
+        枚<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        スペ直:<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="numeric"  name="specialchoku" value=0>
+        枚<br>
+      </div>
+    </form>
+      <div class="offset-6 offset-sm-6 offset-md-6 offset-lg-6 col-6 col-sm-6 col-md-6 col-lg-6 mt-3">
+        <h5 id="subtotal_choku"></h5>
+      </div>
+    </div>
+  </div>
 <div class="m-1 p-1 mb-3 pb-3">
 <div class="row">
   <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
@@ -194,7 +236,7 @@
     <input type="number" inputmode="numeric"  name="kakuseihakai5" value=0>
     枚 <br>
   </div>
-  <div class="offset-6 offset-sm-4 offset-md-4 offset-lg-4 col-6 col-sm-2 col-md-2 col-lg-2 mt-3">
+  <div class="offset-6 offset-sm-6 offset-md-6 offset-lg-6 col-6 col-sm-6 col-md-6 col-lg-6 mt-3">
     <h5 id="subtotal_hakai"></h5>
   </div>
 </div>
@@ -316,267 +358,10 @@
     <input type="number" inputmode="numeric"  name="masterinf" value=0>
     枚 <br>
   </div>
-  <div class="offset-6 offset-sm-4 offset-md-4 offset-lg-4 col-6 col-sm-2 col-md-2 col-lg-2 mt-3">
+  <div class="offset-6 offset-sm-6 offset-md-6 offset-lg-6 col-6 col-sm-6 col-md-6 col-lg-6 mt-3">
     <h5 id="subtotal_bonus"></h5>
   </div>
 </div>
-</div>
-</form>
-
-<div class="m-1 p-1">
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
-      <h2>ガチャ系</h2>
-    </div>
-  </div>
-
-<form name="gacha">
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      ダイヤ:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="dia" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      破壊ガチャ:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="hakaigacha" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      エメラルド:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="emerald" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      超エメラルド:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="superemerald" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      クレイジー:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="crazy" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      破壊ゲーム:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="hakaigame" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      直撃ゲーム:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="chokugame" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      バイク:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="bike" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      ミサイル:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="missile" value=0>
-      枚 <br><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      3連LIGHT:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="light3" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      3連:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="normal3" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      3連HYPER:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="hyper3" value=0>
-      枚 <br><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      5連LIGHT:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="light5" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      5連:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="normal5" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      5連HYPER:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="hyper5" value=0>
-      枚 <br><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      7連LIGHT:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="light7" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      7連:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="normal7" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      7連HYPER:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="hyper7" value=0>
-      枚 <br><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      バトルノーマル:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="battleN" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      バトルチャンス:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="battleC" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      バトル激アツ:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="battleH" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      バトル極アツ:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="battleSH" value=0>
-      枚 <br><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      青鬼:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="aooni" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      フェス:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="fes" value=0>
-      枚 <br><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      至福プチ:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="shifukuP" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-  <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      至福LIGHT:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="shifukuL" value=0>
-      枚 <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      至福:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="shifukuN" value=0>
-      枚 <br>
-    </div>
-    <div class="offset-6 offset-sm-4 offset-md-4 offset-lg-4 col-6 col-sm-2 col-md-2 col-lg-2 mt-3">
-      <h5 id="subtotal_gacha"></h5>
-    </div>
-  </div>
 </div>
 </form>
 
@@ -623,38 +408,271 @@
       枚<br><br>
     </div>
   </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      スロ直:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="slotchoku" value=0>
-      枚<br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      パチ直:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="pachichoku" value=0>
-      枚<br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-      スペ直:<br>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <input type="number" inputmode="numeric"  name="specialchoku" value=0>
-      枚<br>
-    </div>
-    <div class="offset-6 offset-sm-4 offset-md-4 offset-lg-4 col-6 col-sm-2 col-md-2 col-lg-2 mt-3">
+    <div class="offset-6 offset-sm-6 offset-md-6 offset-lg-6 col-6 col-sm-6 col-md-6 col-lg-6 mt-3">
       <h5 id="subtotal_misc"></h5>
     </div>
   </div>
 </div>
 </form>
+
+<div class="m-1 p-1">
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
+      <h2>ガチャ系</h2>
+    </div>
+  </div>
+
+<form name="gacha">
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      青鬼:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="aooni" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      破壊ガチャ:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="hakaigacha" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      フェス:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="fes" value=0>
+      枚 <br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      バイク:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="bike" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      エメラルド:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="emerald" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      ミサイル:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="missile" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      クレイジー:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="crazy" value=0>
+      枚 <br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      至福:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="shifukuN" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      至福プチ:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="shifukuP" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+  <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      至福LIGHT:<br><br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="shifukuL" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      バトルノーマル:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="battleN" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      バトルチャンス:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="battleC" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      バトル激アツ:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="battleH" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      バトル極アツ:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="battleSH" value=0>
+      枚 <br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      ダイヤ:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="dia" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      超エメラルド:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="superemerald" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      直撃ゲーム:<br><br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="chokugame" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      7連:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="normal7" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      7連HYPER:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="hyper7" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      7連LIGHT:<br><br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="light7" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      破壊ゲーム:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="hakaigame" value=0>
+      枚 <br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      3連:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="normal3" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      3連HYPER:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="hyper3" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      3連LIGHT:<br><br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="light3" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      5連:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="normal5" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      5連HYPER:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="hyper5" value=0>
+      枚 <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+      5連LIGHT:<br>
+    </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+      <input type="number" inputmode="numeric"  name="light5" value=0>
+      枚 <br>
+    </div>
+  </div>
+    <div class="offset-6 offset-sm-6 offset-md-6 offset-lg-6 col-6 col-sm-6 col-md-6 col-lg-6 mt-3">
+      <h5 id="subtotal_gacha"></h5>
+    </div>
+  </div>
+</div>
+</form>
+
 
   <div class="row">
     <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">

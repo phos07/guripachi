@@ -60,6 +60,9 @@
             <a class="dropdown-item" href="chartAndroid.html">Android版一覧表</a>
           </div>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="attack.html">機種別アタック講座</a>
+        </li>
       </ul>
       <ul class="navbar-nav">
       <span style="text-align: right;" class="navbar-text">
@@ -79,6 +82,42 @@
   </form>
 </div>
 
+  <div class="m-1 p-1 mb-3 pb-3">
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
+        <h2>直撃系</h2>
+      </div>
+    </div>
+    <form name="ratechoku">
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        スロ直 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rateslotchoku" value=0>
+        分<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        パチ直 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratepachichoku" value=0>
+        分<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        スペ直 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratespecialchoku" value=0>
+        分<br>
+      </div>
+    </div>
+  </form>
+</div>
 
   <div class="m-1 p-1 mb-3 pb-3">
   <div class="row">
@@ -329,6 +368,52 @@
   <div class="m-1 p-1">
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
+        <h2>その他</h2>
+      </div>
+    </div>
+    <form name="ratemisc">
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+          最高設定∞分 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratesetting" value=0>
+        分<br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        設定確認券 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratechecksetting" value=0>
+        分<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        レート1.5倍 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratex1_5" value=0>
+        分<br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        レート2倍 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratex2" value=0>
+        分<br><br>
+      </div>
+    </div>
+  </div>
+  </form>
+
+  <div class="m-1 p-1">
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
         <h2>ガチャ系</h2>
       </div>
     </div>
@@ -336,10 +421,10 @@
   <form name="rategacha">
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        ダイヤ →<br>
+        青鬼 →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratedia" value=0>
+        <input type="number" inputmode="decimal"  id="rateaooni" value=0>
         分 <br>
       </div>
     </div>
@@ -354,47 +439,11 @@
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        エメラルド →<br>
+        フェス →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rateemerald" value=0>
-        分 <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        超エメラルド →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratesuperemerald" value=0>
-        分 <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        クレイジー →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratecrazy" value=0>
-        分 <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        破壊ゲーム →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratehakaigame" value=0>
-        分 <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        直撃ゲーム →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratechokugame" value=0>
-        分 <br>
+        <input type="number" inputmode="decimal"  id="ratefes" value=0>
+        分 <br><br>
       </div>
     </div>
     <div class="row">
@@ -408,91 +457,55 @@
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        エメラルド →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rateemerald" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
         ミサイル →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
         <input type="number" inputmode="decimal"  id="ratemissile" value=0>
-        分 <br><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        3連LIGHT →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate3L" value=0>
         分 <br>
       </div>
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        3連 →<br>
+        クレイジー →<br><br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate3N" value=0>
+        <input type="number" inputmode="decimal"  id="ratecrazy" value=0>
         分 <br>
       </div>
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        3連HYPER →<br>
+        至福 →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate3H" value=0>
-        分 <br><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        5連LIGHT →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate5L" value=0>
+        <input type="number" inputmode="decimal"  id="rateshifukuN" value=0>
         分 <br>
       </div>
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        5連 →<br>
+        至福プチ →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate5N" value=0>
+        <input type="number" inputmode="decimal"  id="rateshifukuP" value=0>
         分 <br>
       </div>
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        5連HYPER →<br>
+        至福LIGHT →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate5H" value=0>
-        分 <br><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        7連LIGHT →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate7L" value=0>
-        分 <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        7連 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate7N" value=0>
-        分 <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        7連HYPER →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rate7H" value=0>
+        <input type="number" inputmode="decimal"  id="rateshifukuL" value=0>
         分 <br><br>
       </div>
     </div>
@@ -534,125 +547,127 @@
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        青鬼 →<br>
+        ダイヤ →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rateaooni" value=0>
+        <input type="number" inputmode="decimal"  id="ratedia" value=0>
         分 <br>
       </div>
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        フェス →<br>
+        超エメラルド →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratefes" value=0>
+        <input type="number" inputmode="decimal"  id="ratesuperemerald" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        直撃ゲーム →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratechokugame" value=0>
         分 <br><br>
       </div>
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        至福プチ →<br>
+        7連 →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rateshifukuP" value=0>
-        分 <br>
-      </div>
-    </div>
-    <div class="row">
-    <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        至福LIGHT →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rateshifukuL" value=0>
+        <input type="number" inputmode="decimal"  id="rate7N" value=0>
         分 <br>
       </div>
     </div>
     <div class="row">
       <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        至福 →<br>
+        7連HYPER →<br>
       </div>
       <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rateshifukuN" value=0>
+        <input type="number" inputmode="decimal"  id="rate7H" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        7連LIGHT →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rate7L" value=0>
         分 <br><br>
       </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        破壊ゲーム →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="ratehakaigame" value=0>
+        分 <br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        3連 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rate3N" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        3連HYPER →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rate3H" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        3連LIGHT →<br><br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rate3L" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        5連 →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rate5N" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        5連HYPER →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rate5H" value=0>
+        分 <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
+        5連LIGHT →<br>
+      </div>
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+        <input type="number" inputmode="decimal"  id="rate5L" value=0>
+        分 <br>
+      </div>
+    </div>
+
 
     </div>
-  </div>
 </form>
 
-  <div class="m-1 p-1">
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4">
-        <h2>その他</h2>
-      </div>
-    </div>
-    <form name="ratemisc">
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-          最高設定∞分 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratesetting" value=0>
-        分<br><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        設定確認券 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratechecksetting" value=0>
-        分<br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        レート1.5倍 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratex1_5" value=0>
-        分<br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        レート2倍 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratex2" value=0>
-        分<br><br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        スロ直 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="rateslotchoku" value=0>
-        分<br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        パチ直 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratepachichoku" value=0>
-        分<br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">
-        スペ直 →<br>
-      </div>
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="number" inputmode="decimal"  id="ratespecialchoku" value=0>
-        分<br><br>
-      </div>
-    </div>
-  </div>
-  </form>
+
 
   <div class="row">
     <div class="offset-2 offset-sm-4 offset-md-4 offset-lg-4 col-4 col-sm-2 col-md-2 col-lg-2">

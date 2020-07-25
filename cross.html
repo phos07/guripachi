@@ -9,14 +9,17 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="normal.css">
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
 </head>
 
-<title>グリパチ便利ツール</title>
+<title>機種別アタック:十字架3</title>
 
 <body>
 
-  <h1>グリパチ便利ツール</h1>
+  <h1>機種別アタック:十字架3</h1>
+
+
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +28,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.html">ホーム</a>
         </li>
         <li class="nav-item dropdown">
@@ -56,7 +59,7 @@
             <a class="dropdown-item" href="chartAndroid.html">Android版一覧表</a>
           </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="attack.html">機種別アタック講座</a>
         </li>
       </ul>
@@ -68,64 +71,41 @@
     </div>
   </nav>
 
-<div class="m-4">
-  <p style="text-align: center;"> このサイトはアプリゲーム「グリパチ」をスムーズにプレイできるように作られています。様々な便利ツールを提供しています。</p>
+<div class="m-4 ct">
+  <h1>十字架3</h1>
 </div>
-
-<div class="m-4">
-  <h2 class="ct">※準パブリックβ版　軍団【陸奥圓明流】専用※</h2>
-</div>
-
-<div class="m-5">
-
-  <h3 style="text-align: center;">破壊換算ツール<br><br></h3>
-
-<div class="row">
-  <div class="offset-xs-3 offset-sm-3 offset-md-3 offset-lg-3 col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
-    <button type="button" class="btn btn-primary m-1" onClick="location.href='convert.html'">換算する</button>
-  </div>
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
-    <button type="button" class="btn btn-primary m-1" onClick="location.href='rate.html'">換算率を見る</button>
-  </div>
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
-    <button type="button" class="btn btn-primary m-1" onClick="location.href='save.html'">過去の記録を見る</button>
-  </div>
-</div>
-</div>
-
-<div class="m-5 pt-5">
-  <h3 style="text-align: center;">一遊戯収支計算<br><br></h3>
+  <div class="m-2">
+    <div class="row">
+      <div class="col-12 offset-sm-3 col-sm-6">
+        <h4>最高設定</h4>
+        <div id="wrapper"style="width: 100%;"></div>
+        <br>
+        <h4>エンペラー</h4>
+        <div id="emperor" style="width: 100%;"></div>
+        <br>
+      </div>
+    </div>
   <div class="row">
-    <div class="offset-xs-3 offset-sm-3 offset-md-3 offset-lg-3 col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align: center;">
-      <button type="button" class="btn btn-primary m-1" onClick="location.href='income2.html'">収支計算</button>
-    </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align: center;">
-      <button type="button" class="btn btn-primary m-1" onClick="location.href='income.html'">収支逆算</button>
-    </div>
+    <div class="col-12">
+    <h4>手順</h4>
+    <ol>
+      <li>直投下しJKRUSHに入れる</li>
+      <li>破壊を投入</li>
+      <li>以降様子を見ながら破壊を追加</li>
+    </ol>
+    <h4>特徴</h4>
+    <ul>
+      <li>この機種は破壊使用時に一気に上乗せします。大体破壊10分で+20,000枚くらい乗ります。ただし、上乗せ演出はリール遊びで回転数が止まるので、時速は一気に減ります。フル破壊は厳禁です。破壊はなるべく最小にすると時速もよくなります。</li><br>
+      <li>十字架3では上乗せの上限があって、65,536枚以上の上乗せは消滅するので、破壊を入れすぎるともったいないです。最初に30分ほど入れて都度追加すると良いです。寝放置には向いていないと思います。</li><br>
+      <li>AT消化中も上乗せはあるので、残り差枚数=出玉ではありません。定期的にボナカを止めて残り枚数をみる必要があります。</li><br>
+      <li>エンペラーに関しては、破壊のもちがよくなると思います（検証中）</li>
+    </ul>
   </div>
 </div>
-
-<div class="m-5 pt-5">
-  <h3 style="text-align: center;">機種別出玉性能表<br><br></h3>
-  <div class="row">
-    <div class="offset-xs-3 offset-sm-3 offset-md-3 offset-lg-3 col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align: center;">
-      <button type="button" class="btn btn-primary m-1" onClick="location.href='chart.html'">iOS版</button>
-    </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align: center;">
-      <button type="button" class="btn btn-primary m-1" onClick="location.href='chartAndroid.html'">Android版</button>
-    </div>
-  </div>
 </div>
 
-<div class="m-5 pt-5">
-  <h3 style="text-align: center;">機種別アタック講座<br><br></h3>
-  <div class="row">
-    <div class="col" style="text-align: center;">
-      <button type="button" class="btn btn-primary m-1" onClick="location.href='attack.html'">機種一覧</button>
-    </div>
-  </div>
-</div>
-
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <script src="cross.js"></script>
 </body>
 
 

@@ -1,3 +1,17 @@
+function calculateChoku() {
+  var slotchoku = parseInt(document.choku.slotchoku.value);
+  var pachichoku = parseInt(document.choku.pachichoku.value);
+  var specialchoku = parseInt(document.choku.specialchoku.value);
+
+  var subslotchoku = slotchoku * localStorage.getItem("slotchokuR");
+  var subpachichoku = pachichoku * localStorage.getItem("pachichokuR");
+  var subspecialchoku = specialchoku * localStorage.getItem("specialchokuR");
+
+  var total = subslotchoku + subpachichoku + subspecialchoku;
+
+  document.getElementById("subtotal_choku").innerHTML = "小計: " + total + "分";
+  return total;
+};
 
 function calculateHakai() {
   var min1 = parseInt(document.hakai.hakai1.value);
@@ -150,33 +164,41 @@ function calculateMisc() {
   var checksetting = parseInt(document.misc.checksetting.value);
   var x1_5 = parseInt(document.misc.x1_5.value);
   var x2 = parseInt(document.misc.x2.value);
-  var slotchoku = parseInt(document.misc.slotchoku.value);
-  var pachichoku = parseInt(document.misc.pachichoku.value);
-  var specialchoku = parseInt(document.misc.specialchoku.value);
 
   var subsetting = setting * localStorage.getItem("settingR");
   var subchecksetting = checksetting * localStorage.getItem("checksettingR");
   var subx1_5 = x1_5 * localStorage.getItem("x1_5R");
   var subx2 = x2 * localStorage.getItem("x2R");
-  var subslotchoku = slotchoku * localStorage.getItem("slotchokuR");
-  var subpachichoku = pachichoku * localStorage.getItem("pachichokuR");
-  var subspecialchoku = specialchoku * localStorage.getItem("specialchokuR");
 
-  var total = subsetting + subchecksetting + subx1_5 + subx2 + subslotchoku + subpachichoku + subspecialchoku;
+  var total = subsetting + subchecksetting + subx1_5 + subx2;
   document.getElementById("subtotal_misc").innerHTML = "小計: " + total + "分";
   return total;
 };
 
 function calculateTotal() {
+  var subchoku = calculateChoku();
   var subhakai = calculateHakai();
   var subbonus = calculateBonus();
   var subgacha = calculateGacha();
   var submisc = calculateMisc();
 
-  var total = subhakai + subbonus + subgacha + submisc;
+  var total = subchoku + subhakai + subbonus + subgacha + submisc;
   document.getElementById("total_hakai").innerHTML = "合計: " + total + "分";
   return total;
 };
+
+function saveChoku() {
+  var slotchoku = parseInt(document.choku.slotchoku.value);
+  var pachichoku = parseInt(document.choku.pachichoku.value);
+  var specialchoku = parseInt(document.choku.specialchoku.value);
+
+  var subslotchoku = slotchoku * localStorage.getItem("slotchokuR");
+  var subpachichoku = pachichoku * localStorage.getItem("pachichokuR");
+  var subspecialchoku = specialchoku * localStorage.getItem("specialchokuR");
+
+  var total = subslotchoku + subpachichoku + subspecialchoku;
+  return total;
+}
 
 function saveHakai() {
   var min1 = parseInt(document.hakai.hakai1.value);
@@ -322,32 +344,29 @@ function saveMisc() {
   var checksetting = parseInt(document.misc.checksetting.value);
   var x1_5 = parseInt(document.misc.x1_5.value);
   var x2 = parseInt(document.misc.x2.value);
-  var slotchoku = parseInt(document.misc.slotchoku.value);
-  var pachichoku = parseInt(document.misc.pachichoku.value);
-  var specialchoku = parseInt(document.misc.specialchoku.value);
 
   var subsetting = setting * localStorage.getItem("settingR");
   var subchecksetting = checksetting * localStorage.getItem("checksettingR");
   var subx1_5 = x1_5 * localStorage.getItem("x1_5R");
   var subx2 = x2 * localStorage.getItem("x2R");
-  var subslotchoku = slotchoku * localStorage.getItem("slotchokuR");
-  var subpachichoku = pachichoku * localStorage.getItem("pachichokuR");
-  var subspecialchoku = specialchoku * localStorage.getItem("specialchokuR");
 
-  var total = subsetting + subchecksetting + subx1_5 + subx2 + subslotchoku + subpachichoku + subspecialchoku;
+  var total = subsetting + subchecksetting + subx1_5 + subx2;
   return total;
 };
+
 function saveTotal() {
+  var subchoku = calculateChoku();
   var subhakai = calculateHakai();
   var subbonus = calculateBonus();
   var subgacha = calculateGacha();
   var submisc = calculateMisc();
-  var total = subhakai + subbonus + subgacha + submisc;
+  var total = subchoku + subhakai + subbonus + subgacha + submisc;
   return total;
 };
 
 function pushSaves() {
 
+  var subZ = saveChoku();
   var subA = saveHakai();
   var subB = saveBonus();
   var subC = saveGacha();
@@ -365,6 +384,7 @@ function pushSaves() {
   var dateSeconds = saveDate.getSeconds();
   dateSeconds = ("0" + dateSeconds).slice(-2);
   var stringDate = dateYear.toString() + "年" + dateMonth.toString() + "月" + dateDay.toString() + "日 " + dateHour.toString() + ":" + dateMinutes.toString() + ":" + dateSeconds.toString();
+  localStorage.setItem("latestSave_subZ", subZ);
   localStorage.setItem("latestSave_subA", subA);
   localStorage.setItem("latestSave_subB", subB);
   localStorage.setItem("latestSave_subC", subC);
