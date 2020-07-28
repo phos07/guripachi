@@ -15,7 +15,7 @@ new gridjs.Grid({
   }],
   search: false,
   data: [
-    ["検証中", "検証中", "検証中", "検証中"]
+    ["検証中", "検証中", "検証中", "1.0倍"]
   ],
   style: {
     th: {
@@ -29,7 +29,6 @@ new gridjs.Grid({
     }
   }
 }).render(document.getElementById("wrapper"));
-
 
 new gridjs.Grid({
   columns: [{
@@ -47,7 +46,7 @@ new gridjs.Grid({
   }],
   search: false,
   data: [
-    ["検証中", "検証中", "検証中", "検証中"]
+    ["時速 約17,394枚", "約13.3枚", "時速 約1,340回転", "1.0倍"]
   ],
   style: {
     th: {
