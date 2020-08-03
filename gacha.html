@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="normal.css">
+  <link rel="stylesheet" type="text/css" href="testing.css">
+
+</head>
+
+<title>ガチャシミュレーター</title>
+
+<body>
+
+  <h1>ガチャシミュレーター</h1>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">ホーム</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            破壊換算
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="convert.html">換算する</a>
+            <a class="dropdown-item" href="rate.html">換算率を見る</a>
+            <a class="dropdown-item" href="save.html">過去の記録を見る</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            一遊戯計算
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="income2.html">一遊戯収支計算</a>
+            <a class="dropdown-item" href="income.html">一遊戯収支逆算</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            機種別出玉表
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="chart.html">iOS版一覧表</a>
+            <a class="dropdown-item" href="chartAndroid.html">Android版一覧表</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="attack.html">機種別アタック講座</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="gacha.html">ガチャシミュレーター</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+      <span style="text-align: right;" class="navbar-text">
+        サイト管理者: phos (ID: 1009463113, iOS)
+      </span>
+    </ul>
+    </div>
+  </nav>
+
+  <div class="m-4">
+    <div class="row ct">
+      <div class="col">
+      <h2>ガチャシミュレーター</h2>
+    </div>
+</div>
+<div class="mt-2 mb-5 row ct">
+<div class="col">
+  <select id="select">
+    <option label="3連ガチャ" value=0>3連ガチャ</option>
+    <option label="【LIGHT】3連ガチャ" value=1>【LIGHT】3連ガチャ</option>
+    <option label="【HYPER】3連ガチャ" value=2>【HYPER】3連ガチャ</option>
+    <option label="5連ガチャ" value=3>5連ガチャ</option>
+    <option label="【LIGHT】5連ガチャ" value=4>【LIGHT】5連ガチャ</option>
+    <option label="【HYPER】5連ガチャ" value=5>【HYPER】5連ガチャ</option>
+    <option label="7連ガチャ" value=6>7連ガチャ</option>
+    <option label="【LIGHT】7連ガチャ" value=7>【LIGHT】7連ガチャ</option>
+    <option label="【HYPER】7連ガチャ" value=8>【HYPER】7連ガチャ</option>
+    <option label="バトルノーマル" value=9>バトルノーマル</option>
+    <option label="バトルチャンス" value=10>バトルチャンス</option>
+    <option label="バトル激アツ" value=11>バトル激アツ</option>
+    <option label="バトル極アツ" value=12>バトル極アツ</option>
+  </select>
+<button type="button" class="btn btn-primary" onClick="toggle()">表示する</button>
+</div>
+</div>
+<!-- 各ガチャdiv -->
+  <div id="normal3">
+    <div class="m-2">
+      <div class="row">
+        <div class="col ct">
+          <h4>3連ガチャシミュレーション</h4><br>
+          <button type="button" class="btn btn-primary" onClick="normal35(3, 0)">ガチャる</button>
+          <button type="button" class="btn btn-primary" onClick="reset35(0)">リセット</button>
+          <br><br><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+          <div id="result3N"></div>
+        </div>
+        <div class="col mt-3 col-sm-4 border">
+          <div id="total3N"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="normal3L">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>【LIGHT】3連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="light357(3, 0)">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset357L(0)">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result3L"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total3L"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="normal3H">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>【HYPER】3連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="hyper357(3, 0)">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset357H(0)">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result3H"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total3H"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="normal5">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>5連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="normal35(5, 1)">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset35(1)">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result5N"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total5N"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="normal5L">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>【LIGHT】5連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="light357(5, 1)">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset357L(1)">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result5L"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total5L"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="normal5H">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>【HYPER】5連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="hyper357(5, 1)">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset357H(1)">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result5H"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total5H"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="normal7">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>7連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="normal7()">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset7()">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result7N"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total7N"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="normal7L">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>【LIGHT】7連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="light357(7, 2)">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset357L(2)">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result7L"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total7L"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="normal7H">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>【HYPER】7連ガチャシミュレーション</h4><br>
+        <button type="button" class="btn btn-primary" onClick="hyper357(7, 2)">ガチャる</button>
+        <button type="button" class="btn btn-primary" onClick="reset357H(2)">リセット</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-3 offset-sm-4 col-sm-4 ct">
+        <div id="result7H"></div>
+      </div>
+      <div class="col mt-3 col-sm-4 border">
+        <div id="total7H"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="battlenormal">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>バトルノーマル</h4><br>
+        <button type="button" class="btn btn-primary" onClick="aurabattlenormal()">ガチャる</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ct">
+        <div id="resultBN"></div>
+      </div>
+</div>
+</div>
+</div>
+
+<div id="battlechance">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>バトルチャンス</h4><br>
+        <button type="button" class="btn btn-primary" onClick="aurabattlechance()">ガチャる</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ct">
+        <div id="resultBC"></div>
+      </div>
+</div>
+</div>
+</div>
+
+<div id="battlehot">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>バトル激アツ</h4><br>
+        <button type="button" class="btn btn-primary" onClick="aurabattlehot()">ガチャる</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ct">
+        <div id="resultBH"></div>
+      </div>
+</div>
+</div>
+</div>
+
+<div id="battlesuper">
+  <div class="m-2">
+    <div class="row">
+      <div class="col ct">
+        <h4>バトル極アツ</h4><br>
+        <button type="button" class="btn btn-primary" onClick="aurabattlesuper()">ガチャる</button>
+        <br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ct">
+        <div id="resultBS"></div>
+      </div>
+</div>
+</div>
+</div>
+
+<script src="gacha.js"></script>
+
+</body>
+
+
+</html>

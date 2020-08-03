@@ -20,3 +20,51 @@ input {
 .ct {
   text-align: center;
 }
+
+.border {
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+}
+
+#result3N {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#result3L {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#result3H {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#result5N {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#result5L {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#result5H {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#result7N {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#result7L {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#result7H {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+select {
+  height: 38px;
+}
