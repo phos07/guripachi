@@ -934,13 +934,13 @@ function aurabattlesuper() {
 
     var random = Math.floor(Math.random()*100);
     if (random > 89) {
-      document.getElementById("resultBS").innerHTML = "<h1 class='rainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBS").innerHTML = "<h1 class='testRainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 24) {
-      document.getElementById("resultBS").innerHTML = "<h1 class='red'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBS").innerHTML = "<h1 class='testRed'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 9) {
-      document.getElementById("resultBS").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBS").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBS").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBS").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     };
 
   document.getElementById("resultBS").insertAdjacentHTML("beforeend", "<button type='button' class='btn btn-primary' onClick='battlesuper()'>TAP</button>");

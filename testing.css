@@ -1,4 +1,213 @@
+/* test */
 
+.testRainbow {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 9999;
+}
+
+.testRainbow::before {
+  content:'';
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height:100%;
+  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  animation: slideRainbow 8s linear infinite;
+  -webkit-animation: slideRainbow 8s linear infinite;
+  -moz-animation: slideRainbow 8s linear infinite;
+  filter: blur(1em);
+  -webkit-filter: blur(1em);
+  -moz-filter: blur(1em);
+  z-index: -1;
+}
+@keyframes slideRainbow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-webkit-keyframes slideRainbow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-moz-keyframes slideRainbow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.testRed {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 9999;
+}
+
+.testRed::before {
+  content:'';
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height:100%;
+  background: linear-gradient(90deg, #ff0000, #ff5f5f, #ff0000);
+  background-size: 400%;
+  animation: slideRed 8s linear infinite;
+  -webkit-animation: slideRed 8s linear infinite;
+  -moz-animation: slideRed 8s linear infinite;
+  filter: blur(1em);
+  -webkit-filter: blur(1em);
+  -moz-filter: blur(1em);
+  z-index: -1;
+}
+@keyframes slideRed {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-webkit-keyframes slideRed {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-moz-keyframes slideRed {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.testGreen {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 9999;
+}
+
+.testGreen::before {
+  content:'';
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height:100%;
+  background: linear-gradient(90deg, #00ff0a, #71ff00, #00ff0a);
+  background-size: 400%;
+  animation: slideGreen 8s linear infinite;
+  -webkit-animation: slideGreen 8s linear infinite;
+  -moz-animation: slideGreen 8s linear infinite;
+  filter: blur(1em);
+  -webkit-filter: blur(1em);
+  -moz-filter: blur(1em);
+  z-index: -1;
+}
+@keyframes slideGreen {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-webkit-keyframes slideGreen {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-moz-keyframes slideGreen {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.testBlue {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 9999;
+}
+
+.testBlue::before {
+  content:'';
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height:100%;
+  background: linear-gradient(90deg, #00d4ff, #352bfb, #00d4ff);
+  background-size: 400%;
+  animation: slideBlue 8s linear infinite;
+  -webkit-animation: slideBlue 8s linear infinite;
+  -moz-animation: slideBlue 8s linear infinite;
+  filter: blur(1em);
+  -webkit-filter: blur(1em);
+  -moz-filter: blur(1em);
+  z-index: -1;
+}
+@keyframes slideBlue {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-webkit-keyframes slideBlue {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@-moz-keyframes slideBlue {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+/* test
 
 .rainbow {
 
@@ -10,20 +219,14 @@
  height: 60px;
  text-align: center;
  line-height: 60px;
- color: #fff;
+ color: white;
  font-size: 2em;
 
  text-decoration: none;
  box-sizing: border-box;
- animation: animate 8s linear infinite;
-}
-@keyframes animate {
- 0% {
-  background-position: 0%;
- }
- 100% {
-  background-position: 400%;
- }
+ animation: AnimationName 8s linear infinite;
+ -webkit-animation: AnimationName 8s linear infinite;
+ -moz-animation: AnimationName 8s linear infinite;
 }
 
 .rainbow:before {
@@ -42,7 +245,236 @@
  transition: 0.5s;
  filter: blur(20px);
  opacity: 1;
- animation: animate 4s linear infinite;
+ -webkit-animation: AnimationName 8s linear infinite;
+ -moz-animation: AnimationName 8s linear infinite;
+ animation: AnimationName 8s linear infinite;
+}
+
+@keyframes animate {
+ 0% {
+  background-position: 0%;
+ }
+ 100% {
+  background-position: 400%;
+ }
+}
+/*
+.css-selector {
+    background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a94f);
+    background-size: 400%;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    100%{background-position:400% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    100%{background-position:400% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    100%{background-position:400% 50%}
+}
+
+
+.glowred {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glowred 1s ease-in-out infinite alternate;
+  -moz-animation: glowred 1s ease-in-out infinite alternate;
+  animation: glowred red1s ease-in-out infinite alternate;
+}
+
+@keyframes glowred {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #E50000, 0 0 30px #E50000, 0 0 40px #E50000, 0 0 50px #E50000, 0 0 60px #E50000, 0 0 70px #E50000;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 60px #FF0000, 0 0 70px #FF0000, 0 0 80px #FF0000;
+  }
+}
+
+@-webkit-keyframes glowred {
+  from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #E50000, 0 0 30px #E50000, 0 0 40px #E50000, 0 0 50px #E50000, 0 0 60px #E50000, 0 0 70px #E50000;
+    }
+
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 60px #FF0000, 0 0 70px #FF0000, 0 0 80px #FF0000;
+    }
+  }
+
+@-moz-keyframes glowred {
+  from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #E50000, 0 0 30px #E50000, 0 0 40px #E50000, 0 0 50px #E50000, 0 0 60px #E50000, 0 0 70px #E50000;
+    }
+
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 60px #FF0000, 0 0 70px #FF0000, 0 0 80px #FF0000;
+    }
+  }
+
+.glowgreen {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glowgreen 1s ease-in-out infinite alternate;
+  -moz-animation: glowgreen 1s ease-in-out infinite alternate;
+  animation: glowgreen 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowgreen {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #32FF00, 0 0 30px #32FF00, 0 0 40px #32FF00, 0 0 50px #32FF00, 0 0 60px #32FF00, 0 0 70px #32FF00;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #2CDF00, 0 0 40px #2CDF00, 0 0 50px #2CDF00, 0 0 60px #2CDF00, 0 0 70px #2CDF00, 0 0 80px #2CDF00;
+  }
+}
+@-webkit-keyframes glowgreen {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #32FF00, 0 0 30px #32FF00, 0 0 40px #32FF00, 0 0 50px #32FF00, 0 0 60px #32FF00, 0 0 70px #32FF00;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #2CDF00, 0 0 40px #2CDF00, 0 0 50px #2CDF00, 0 0 60px #2CDF00, 0 0 70px #2CDF00, 0 0 80px #2CDF00;
+  }
+}
+@-moz-keyframes glowgreen {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #32FF00, 0 0 30px #32FF00, 0 0 40px #32FF00, 0 0 50px #32FF00, 0 0 60px #32FF00, 0 0 70px #32FF00;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #2CDF00, 0 0 40px #2CDF00, 0 0 50px #2CDF00, 0 0 60px #2CDF00, 0 0 70px #2CDF00, 0 0 80px #2CDF00;
+  }
+}
+
+.glowblue {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glowblue 1s ease-in-out infinite alternate;
+  -moz-animation: glowblue 1s ease-in-out infinite alternate;
+  animation: glowblue 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowblue {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #0093FF, 0 0 30px #0093FF, 0 0 40px #0093FF, 0 0 50px #0093FF, 0 0 60px #0093FF, 0 0 70px #0093FF;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0061FF, 0 0 40px #0061FF, 0 0 50px #0061FF, 0 0 60px #0061FF, 0 0 70px #0061FF, 0 0 80px #0061FF;
+  }
+}
+@-webkit-keyframes glowblue {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #0093FF, 0 0 30px #0093FF, 0 0 40px #0093FF, 0 0 50px #0093FF, 0 0 60px #0093FF, 0 0 70px #0093FF;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0061FF, 0 0 40px #0061FF, 0 0 50px #0061FF, 0 0 60px #0061FF, 0 0 70px #0061FF, 0 0 80px #0061FF;
+  }
+}
+@-moz-keyframes glowblue {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #0093FF, 0 0 30px #0093FF, 0 0 40px #0093FF, 0 0 50px #0093FF, 0 0 60px #0093FF, 0 0 70px #0093FF;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0061FF, 0 0 40px #0061FF, 0 0 50px #0061FF, 0 0 60px #0061FF, 0 0 70px #0061FF, 0 0 80px #0061FF;
+  }
+}
+/*
+.btn {
+  position: relative;
+  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+	background-size: 400%;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+  animation: Gradient 4s linear infinite;
+  text-decoration: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  color: white;
+  background-size: inherit;
+  background-image: inherit;
+  animation: Gradient 4s linear infinite;
+  left: 0px;
+  right: 0px;
+  top: 2px;
+  height: 100%;
+  filter: blur(1rem);
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0%;
+	}
+  100% {
+    background-position: 400%;
+  }
+}
+
+
+.rainbw {
+  position: relative;
+	background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+	background-size: 400% 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  animation: animate 8s linear infinite;
+  text-decoration: none;
+}
+
+
+
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+  100% {
+    background-position: 400%
+  }
+}
+
+.rainow::after {
+  content: '';
+  position: absolute;
+  background-size: inherit;
+  background-image: inherit;
+  animation: inherit;
+  left: 0px;
+  right: 0px;
+  top: 2px;
+  height: 100%;
+  filter: blur(1rem);
 }
 
 .blue {
@@ -57,6 +489,7 @@
  line-height: 60px;
  color: #fff;
  font-size: 2em;
+ border:none;
 
  text-decoration: none;
  box-sizing: border-box;
