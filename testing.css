@@ -19,40 +19,10 @@
   height:100%;
   background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
   background-size: 400%;
-  -moz-animation: slideRainbow 8s linear infinite;
-  -webkit-animation: slideRainbow 8s linear infinite;
-  animation: slideRainbow 8s linear infinite;
+  -moz-animation: slide 8s linear infinite;
+  -webkit-animation: slide 8s linear infinite;
+  animation: slide 8s linear infinite;
   z-index: -1;
-}
-@keyframes slideRainbow {
-  0% {
-    background-position: 0%;
-    filter: blur(1em)
-  }
-  100% {
-    background-position: 400%;
-    filter: blur(1em)
-  }
-}
-@-webkit-keyframes slideRainbow {
-  0% {
-    background-position: 0%;
-    -webkit-filter: blur(1em)
-  }
-  100% {
-    background-position: 400%;
-    -webkit-filter: blur(1em)
-  }
-}
-@-moz-keyframes slideRainbow {
-  0% {
-    background-position: 0%;
-    -moz-filter: blur(1em)
-  }
-  100% {
-    background-position: 400%;
-    -moz-filter: blur(1em)
-  }
 }
 
 .testRed {
@@ -74,15 +44,15 @@
   height:100%;
   background: linear-gradient(90deg, #ff0000, #ff5f5f, #ff0000);
   background-size: 400%;
-  animation: slideRed 8s linear infinite;
-  -webkit-animation: slideRed 8s linear infinite;
-  -moz-animation: slideRed 8s linear infinite;
+  animation: slide 8s linear infinite;
+  -webkit-animation: slide 8s linear infinite;
+  -moz-animation: slide 8s linear infinite;
   filter: blur(1em);
   -webkit-filter: blur(1em);
   -moz-filter: blur(1em);
   z-index: -1;
 }
-@keyframes slideRed {
+/* @keyframes slideRed {
   0% {
     background-position: 0%;
   }
@@ -105,7 +75,7 @@
   100% {
     background-position: 400%;
   }
-}
+} */
 
 .testGreen {
   position:relative;
@@ -126,15 +96,15 @@
   height:100%;
   background: linear-gradient(90deg, #00ff0a, #71ff00, #00ff0a);
   background-size: 400%;
-  animation: slideGreen 8s linear infinite;
-  -webkit-animation: slideGreen 8s linear infinite;
-  -moz-animation: slideGreen 8s linear infinite;
+  animation: slide 8s linear infinite;
+  -webkit-animation: slide 8s linear infinite;
+  -moz-animation: slide 8s linear infinite;
   filter: blur(1em);
   -webkit-filter: blur(1em);
   -moz-filter: blur(1em);
   z-index: -1;
 }
-@keyframes slideGreen {
+/* @keyframes slideGreen {
   0% {
     background-position: 0%;
   }
@@ -157,7 +127,7 @@
   100% {
     background-position: 400%;
   }
-}
+} */
 
 .testBlue {
   position:relative;
@@ -178,15 +148,15 @@
   height:100%;
   background: linear-gradient(90deg, #00d4ff, #352bfb, #00d4ff);
   background-size: 400%;
-  animation: slideBlue 8s linear infinite;
-  -webkit-animation: slideBlue 8s linear infinite;
-  -moz-animation: slideBlue 8s linear infinite;
+  animation: slide 8s linear infinite;
+  -webkit-animation: slide 8s linear infinite;
+  -moz-animation: slide 8s linear infinite;
   filter: blur(1em);
   -webkit-filter: blur(1em);
   -moz-filter: blur(1em);
   z-index: -1;
 }
-@keyframes slideBlue {
+/* @keyframes slideBlue {
   0% {
     background-position: 0%;
   }
@@ -208,6 +178,37 @@
   }
   100% {
     background-position: 400%;
+  }
+} */
+
+@keyframes slide {
+  0% {
+    background-position: 0%;
+    filter: blur(1em)
+  }
+  100% {
+    background-position: 400%;
+    filter: blur(1em)
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    background-position: 0%;
+    -webkit-filter: blur(1em)
+  }
+  100% {
+    background-position: 400%;
+    -webkit-filter: blur(1em)
+  }
+}
+@-moz-keyframes slide {
+  0% {
+    background-position: 0%;
+    -moz-filter: blur(1em)
+  }
+  100% {
+    background-position: 400%;
+    -moz-filter: blur(1em)
   }
 }
 /* test
