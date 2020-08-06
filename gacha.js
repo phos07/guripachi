@@ -671,32 +671,32 @@ function aurabattlenormal() {
   if (colorAura === 4) {
     var random = Math.floor(Math.random()*100);
     if (random > 89) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='rainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testRainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 24) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='red'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testRed'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 9) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 3) {
     var random = Math.floor(Math.random()*100);
     if (random > 34) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='red'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testRed'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 19) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 2) {
     var random = Math.floor(Math.random()*100);
     if (random > 69) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBN").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBN").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 1) {
-    document.getElementById("resultBN").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+    document.getElementById("resultBN").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
   }
 
 
@@ -764,32 +764,32 @@ function aurabattlechance() {
   if (colorAura === 4) {
     var random = Math.floor(Math.random()*100);
     if (random > 89) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='rainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testRainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 24) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='red'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testRed'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 9) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 3) {
     var random = Math.floor(Math.random()*100);
     if (random > 34) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='red'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testRed'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 19) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 2) {
     var random = Math.floor(Math.random()*100);
     if (random > 69) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBC").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBC").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 1) {
-    document.getElementById("resultBC").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+    document.getElementById("resultBC").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
   }
 
 
@@ -857,32 +857,32 @@ function aurabattlehot() {
   if (colorAura === 4) {
     var random = Math.floor(Math.random()*100);
     if (random > 89) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='rainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testRainbow'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 24) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='red'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testRed'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 9) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 3) {
     var random = Math.floor(Math.random()*100);
     if (random > 34) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='red'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testRed'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > 19) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 2) {
     var random = Math.floor(Math.random()*100);
     if (random > 69) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='green'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testGreen'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     } else if (random > -1) {
-      document.getElementById("resultBH").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+      document.getElementById("resultBH").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
     }
   } else if (colorAura === 1) {
-    document.getElementById("resultBH").innerHTML = "<h1 class='blue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
+    document.getElementById("resultBH").innerHTML = "<h1 class='testBlue'>NEXT BATTLE</h1><br><br><br><br><br><br>";
   }
 
 
